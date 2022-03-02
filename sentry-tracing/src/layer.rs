@@ -186,6 +186,7 @@ where
         };
         // Add the data from the original span to the sentry span.
         // This comes from typically the `fields` in `tracing::instrument`.
+        println!("DATA: {:?}", data);
         for (key, value) in data {
             sentry_span.set_data(&key, value);
         }
